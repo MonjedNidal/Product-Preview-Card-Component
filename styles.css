@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --FrauncesFont: "Fraunces", serif;
+  --MontserratFont: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--Cream);
+  height: 100vh;
+  font-family: var(--MontserratFont);
+  color: var(--VeryDarkBlue);
+}
+
+.mainCard {
+  width: 45rem;
+  height: 33.6rem;
+  background-color: var(--White);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.mainCard .cardImg {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.cardText {
+  padding: 2rem !important;
+}
+.cardText span {
+  letter-spacing: 4px;
+  color: var(--DarkGrayishBlue);
+}
+.cardText h1 {
+  margin: 1.2rem 0rem;
+  width: 85%;
+}
+.cardText .price,
+h1 {
+  font-family: var(--FrauncesFont);
+}
+
+.cardText p {
+  width: 100%;
+  font-size: 16px;
+  color: var(--DarkGrayishBlue);
+  margin-bottom: 2rem !important;
+}
+
+.cardText .price {
+  font-size: 2.2em;
+  margin-right: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--DarkCyan);
+}
+
+.cardText h6 {
+  color: var(--DarkGrayishBlue);
+}
+
+.cardText a {
+  font-size: 17px;
+  display: inline-block;
+  width: 100% !important;
+  text-decoration: none;
+  color: var(--White);
+  background-color: var(--DarkCyan);
+  padding: 1.2rem 2rem;
+  width: 100%;
+  margin-top: 1.7rem !important;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  transition: all ease-in-out 0.2s;
+}
+.cardText a:hover {
+  background-color: hsl(158, 37%, 27%);
+}
+.row > * {
+  padding: 0px;
+}
+
+.attribution {
+  color: var(--VeryDarkBlue);
+  font-size: 18px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--DarkCyan);
+}
+
+@media (max-width: 768px) {
+  body {
+    height: fit-content;
+  }
+  .mainCard {
+    margin: 2rem 2rem !important;
+    width: 90%;
+    height: fit-content;
+  }
+  .mainCard > * {
+    /* padding: 0px !important; */
+    margin: 0px !important;
+  }
+  .mainCard .cardImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/image-product-mobile.jpg);
+    border-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height: 25rem;
+  }
+  .attribution {
+    margin-bottom: 2rem;
+  }
+}
